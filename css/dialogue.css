@@ -1,0 +1,120 @@
+#dialogue>div:last-of-type {
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+#dialogueWrapper {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+}
+
+#characterImg {
+    position: relative;
+    width: 100%;
+    bottom: -3%;
+    left: -10%;
+    z-index: 0;
+}
+
+#characterName {
+    border: 3px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
+    padding: 1vw 2vw;
+    width: max-content;
+    z-index: 3;
+    position: absolute;
+    top: -3vh;
+    left: .5vh;
+    font-family: var(--barriecito);
+    font-size: 20px;
+}
+
+#dialogueBox {
+    position: absolute;
+    bottom: 7vh;
+    border: 3px solid var(--black);
+    background-color: rgba(255, 255, 255, .9);
+    width: 95%;
+    height: 20%;
+    z-index: 2;
+}
+
+#dialogueBox>p {
+    margin: 8%;
+    font-family: var(--elite);
+    line-height: 23px;
+}
+
+#indicator {
+    padding: 8px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.none {
+    display: none;
+}
+
+.more {
+    display: inline-block;
+    border: solid var(--black);
+    border-width: 0px 4px 4px 0px;
+    transform: rotate(-45deg);
+    animation: arrowBlink .5s 0s infinite alternate;
+}
+
+.done {
+    display: inline-block;
+    background-color: var(--black);
+    bottom: 60px;
+    animation: doneBlink 1s infinite alternate linear;
+}
+
+#overlayStandby {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    background-color: var(--black);
+    z-index: -2;
+
+}
+#overlayStandby img:nth-child(1) {
+    position: absolute;
+    width: 70%;
+    top: 20%;
+    left: 16%
+}
+#overlayStandby img:nth-child(2) {
+    display: block;
+    height: 100%;
+    /* width: 100%; */
+    opacity: .4;
+    /* filter: saturate(3); */
+}
+.textlayer {
+    position: absolute;
+    background-color: var(--white);
+    text-align: center;
+    top: 55%;
+    width: 100%;
+    padding: 2vh 2vh;
+    opacity: .8;
+    z-index: -2;
+}
+
+@keyframes arrowBlink {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes doneBlink {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
